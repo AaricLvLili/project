@@ -1,0 +1,3 @@
+interface IResObject {
+	OnResUnload(): boolean;
+}

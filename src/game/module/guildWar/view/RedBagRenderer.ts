@@ -1,0 +1,22 @@
+class RedBagRenderer extends eui.ItemRenderer {
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // RedBagRendererSkin.exml
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    private num: eui.Label
+    private nameLabel: eui.Label
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	public constructor() {
+		super()
+		this.skinName = "RedBagRendererSkin"
+	}
+
+	dataChanged() {
+		let data = this.data as Sproto.guildwar_redpacket_getinfo
+		this.num.text = data.yuanbao + ""
+		this.nameLabel.text = data.actorname
+	}
+}
+window["RedBagRenderer"]=RedBagRenderer
